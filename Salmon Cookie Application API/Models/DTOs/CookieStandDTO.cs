@@ -24,27 +24,23 @@
 
         public static explicit operator CookieStandGetDTO(CookieStand cookieStand)
         {
-            var y = new List<int>();
+            var listIntsHourlySales = new List<int>();
             foreach (var item in cookieStand.HourlySales)
             {
-                y.Add(item.SalePerHour);
+                listIntsHourlySales.Add(item.SalePerHour);
             }
-            var x = new CookieStandGetDTO
+            return new CookieStandGetDTO
             {
                 ID = cookieStand.ID,
                 Location = cookieStand.Location,
                 Description = cookieStand.Description,
-                HourlySales = y,
+                HourlySales = listIntsHourlySales,
                 AverageCookiesPerSale = cookieStand.AverageCookiesPerSale,
                 MaximumCustomerPerHour = cookieStand.MaximumCustomerPerHour,
                 MinimumCustomerPerHour = cookieStand.MinimumCustomerPerHour,
                 Owner = cookieStand.Owner
             };
-            return x;
         }
     }
 
 }
-
-
-
