@@ -1,5 +1,7 @@
 # Salmon Cookie Application API
 
+[deployed website url](https://salmoncookieapplicationapi20231007222023.azurewebsites.net/index.html)
+
 ## ERD
 
 ![temp](./1.png)
