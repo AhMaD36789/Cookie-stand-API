@@ -21,9 +21,9 @@ namespace Salmon_Cookie_Application_API.Models.Services
                 cookieStand.HourlySales = new List<HourlySale>();
                 for (int i = 0; i < 14; i++)
                 {
-                    int customers = random.Next(cookieStand.MinimumCustomerPerHour, cookieStand.MaximumCustomerPerHour + 1);
-                    int sales = (int)(customers * cookieStand.AverageCookiesPerSale);
-                    cookieStand.HourlySales.Add(new HourlySale { SalePerHour = sales });
+                    int customersPerHour = random.Next(cookieStand.MinimumCustomerPerHour, cookieStand.MaximumCustomerPerHour + 1);
+                    int cookiesSold = (int)Math.Round(customersPerHour * cookieStand.AverageCookiesPerSale);
+                    cookieStand.HourlySales.Add(new HourlySale { SalePerHour = cookiesSold });
                 }
 
                 _context.Cookies.Add(cookieStand);

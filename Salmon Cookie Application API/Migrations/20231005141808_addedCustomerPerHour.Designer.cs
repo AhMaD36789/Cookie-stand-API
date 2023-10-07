@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Salmon_Cookie_Application_API.Data;
 
@@ -10,9 +11,11 @@ using Salmon_Cookie_Application_API.Data;
 namespace Salmon_Cookie_Application_API.Migrations
 {
     [DbContext(typeof(CookieDBContext))]
-    partial class CookieDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231005141808_addedCustomerPerHour")]
+    partial class addedCustomerPerHour
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
